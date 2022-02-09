@@ -1,4 +1,4 @@
-import { testarValores, atribuirValoresInput, inputs } from './atribuir_valores.js';
+import { cadastrar, inputs } from './atribuir_valores.js';
 import { alterarValorInputs, limparInputs, habilitarInputs, spanCEP, excluirCadastro, fecharTabela, criarTabela } from './alterando_a_DOM.js';
 window.criarTabela = criarTabela;
 window.excluirCadastro = excluirCadastro;
@@ -32,7 +32,7 @@ document.querySelector('#botao').addEventListener('click', (event, valor) => {
     event.preventDefault;
     valor = 'botao';
 
-    testarValores(atribuirValoresInput);
+    cadastrar();
     limparInputs(valor);
 })
 

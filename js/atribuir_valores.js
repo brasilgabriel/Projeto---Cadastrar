@@ -31,7 +31,22 @@ export const divs = {
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
-export function testarValores(callback) {
+
+function verificaExistente(dado) {
+    return cadastros.some(prop => prop.email === dado)
+}
+
+export function cadastrar() {
+
+    if (!verificaExistente(inputs.email.value)) { // se não existir nenhum email igual ao email inserido, é salvo os dados no LocalStorage
+        testarValores(atribuirValoresInput)
+
+    } else { // se já existir um email igual ao email inserido, o usuário é alertado
+        alert('Esse email já está sendo utilizado!')
+    }
+}
+
+function testarValores(callback) {
 
     switch (span_cep.innerHTML === 'não sei o meu CEP') {
 

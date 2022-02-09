@@ -231,6 +231,12 @@ section div #botao {
     section form div #floatingInputValue {
         height: 40px;
         margin: 0.6vw 0;
+        font-size: 13px;
+    }
+
+    section #form_2 #div_select select{
+        margin: 1vw 0;
+        font-size: 12px;
     }
     
     section form div label {
@@ -285,5 +291,3 @@ section div #botao {
         font-size: 10px;
     }
 }
-
-/* falta arrumar a tabela e criar validação para emails existentes */
