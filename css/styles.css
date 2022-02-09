@@ -10,85 +10,76 @@ body {
     justify-content: center;
 }
 
+#div_ver_cadastros {
+    position: fixed;
+    top: 3%;
+    right: 5%;
+}
+
+#div_ver_cadastros #ver_cadastros {
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+}
+
 section {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column; 
     height: 100vh;
-    /* width: 100vw; */
+    width: 800px;
 }
 
 section #form_1 {  
     display: grid;
 	grid-template-columns: repeat(2, 1fr);
     place-items: center;
-    width: 60vw;
+    width: 100%;
     margin-bottom: 2rem;
-}
-
-#div_ver_cadastros {
-    position: absolute;
-    top: 3%;
-    right: 5%;
-}
-
-#div_ver_cadastros #ver_cadastros {
-    width: 7vw;
-    height: 2.5rem;
-    font-size: 0.8vw;
 }
 
 section #form_2 {  
     display: grid;
 	grid-template-columns: repeat(2, 1fr);
     place-items: center;
-    width: 60vw;
-    height: 25%;
+    width: 100%;
 }
 
 section div h1 {
-    padding: 1.5vw 0 0.3vw 0;
-    font-size: 3.5vw;
+    font-size: 70px;
     color: #0d6efd;
 }
 
 section .div_h3 {
-    width: 50vw;
-    margin: 1.3rem 0 0 0;
+    width: 95%;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 section .div_h3 h3{
     color: white;
     text-shadow: #0d6efd 0.1vw 0.1vw 0.1vw;
-    font-size: 1.5vw;
+    font-size: 30px;
 }
 
-section form div .form-control {
-    width: 15vw;
-    margin: 0.2vw;
-}
+section form .form-floating {
+    width: 70%;
+} 
 
 section form div #floatingInputValue {
-    height: 3.5rem;
-    font-size: 0.9vw;
-}
-
-section form div label {
-    font-size: 0.8vw;
+    height: 50px;
+    margin: 0.2vw 0;
 }
 
 section #form_2 #div_cep {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 50%;
 }
 
 section #form_2 #div_cep span{
     color: #0d6efd;
-    font-size: 0.9vw;
+    font-size: 100%;
     font-style: italic;
     text-decoration: underline;
     cursor: pointer;
@@ -99,25 +90,26 @@ section #form_2 #div_cep span:hover{
 }
 
 section #form_2 #div_select {
-    width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 section #form_2 #div_select select{
-    font-size: 0.8vw;
+    width: 70%;
 }
 
 section #div_botao {
     width: 50%;
-    height: 10vh;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 section div #botao {
-    width: 15vw;
-    height: 3rem;
-    font-size: 1vw;
+    width: 200px;
+    font-size: 20px;
 }
 
 .div_inputs_desabilitados #select_desabilitado {
@@ -162,23 +154,33 @@ section div #botao {
     width: 80%;
 }
 
-.bi {
-    cursor: pointer;
+#section_tabela .table th, #section_tabela .table td{
+    font-size: 0.8vw;
 }
 
-.bi:hover {
+#section_tabela .table td .bi {
+    cursor: pointer;
+    width: 1vw;
+}
+
+#section_tabela .table td .bi:hover {
     filter: brightness(1.3);
 }
 
-#th_fechar {
+#section_tabela .table #th_fechar {
     display: flex;
     justify-content: center;
 } 
 
-#fechar {
-    width: 1.8em;
-    height: 1.8em;
+#section_tabela .table #th_fechar #fechar {
+    width: 2vw;
+    height: 1.5vw;
     margin: 0;
+    cursor: pointer;
+}
+
+#section_tabela .table #th_fechar #fechar:hover {
+    filter: brightness(1.3);
 }
 
 #div_nenhum_cadastro {
@@ -195,8 +197,7 @@ section div #botao {
 
 #div_nenhum_cadastro h1 {
     font-size: 4vw;
-    color: white;
-    
+    color: white;  
 }
 
 #div_nenhum_cadastro p{
@@ -204,156 +205,84 @@ section div #botao {
     color: #0d6efd;
 }
 
-@media screen and (max-width: 1630px) {
+@media screen and (max-width: 800px) {
+
+    section { 
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    section { 
+        width: 400px;
+    }
+    
+    section div h1 {
+        font-size: 40px;
+    }
+    
+    section .div_h3 h3{
+        color: white;
+        text-shadow: #0d6efd 0.1vw 0.1vw 0.1vw;
+        font-size: 20px;
+    } 
+    
+    section form div #floatingInputValue {
+        height: 40px;
+        margin: 0.6vw 0;
+    }
+    
+    section form div label {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #div_ver_cadastros {
+        top: 1%;
+    }
+
+    section div h1 {
+        font-size: 35px;
+    }
+
+    section .div_h3 {
+        width: 60%;
+    }
 
     section #form_1 {  
-        margin-bottom: 1.8rem
-    }
-
-    section .div_h3 {    
-        margin: 2rem 0 0 0;
-    }
-}
-
-@media screen and (max-width: 1370px) {
-    section form div #floatingInputValue {
-        height: 2.8rem;
-        font-size: 0.9vw;
-    }
-
-    section .div_h3 {    
-        margin: 0;
-    }
-
-    section div #botao {
-        height: 2.3rem;
-    }
-
-    #div_ver_cadastros #ver_cadastros {
-        height: 2rem;
-    }
-}
-
-@media screen and (max-width: 1115px) {
-    #div_ver_cadastros #ver_cadastros {
-        font-size: 0.5rem;
-    }
-}
-
-@media screen and (max-width: 1065px) {
-    section form div #floatingInputValue {
-        height: 2.4rem;
-    } 
-} 
-
-@media screen and (max-width: 900px) {
-
-    section form div #floatingInputValue {
-        height: 2rem;
-    }
-}
-
-@media screen and (max-width: 830px) {
-
-    #div_ver_cadastros {
-        right: 6%;
-        position: fixed;
-    }
-
-    #div_ver_cadastros #ver_cadastros {
-        width: 15vw;
-        height: 2.8rem;
-        font-size: 1.7vw;
-    }
-
-    section {
-        margin: 0 auto;
-        position: fixed;
-        left: 0;
-        right: 0;
-    }
-
-    section div h1 {
-        padding: 1.5vw 0 0.3vw 0;
-        font-size: 7vw;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
     }
     
-    section .div_h3 {
-        margin: 0;
-    }
-    
-    section .div_h3 h3{
-        font-size: 2.5vw;
-    }
-    
-    section form div #floatingInputValue {
-        height: 2.5rem;
-        font-size: 0.9vw;
-        margin-top: 1vw
-    }
-    
-    section form div label {
-        font-size: 1.3vw;
+    section #form_2 {  
+        display: flex;
+        flex-direction: column;
+        width: 60%;
     }
 
-    section #form_2 #div_cep span{
-        font-size: 1.5vw;
+    section form div #floatingInputValue {
+        margin: 1vw 0;
+        font-size: 12px;
     }
 
     section #form_2 #div_select select{
-        font-size: 1.5vw;
+        margin: 1vw 0;
+        font-size: 12px;
     }
-
+    
     section div #botao {
-        height: 3.3rem;
-        font-size: 2vw;
-    }
-}
-
-@media screen and (max-width: 585px) {
-
-    #div_ver_cadastros {
-        top: 6%;
-        right: 10%;
+        width: 150px;
+        font-size: 15px;
     }
 
     #div_ver_cadastros #ver_cadastros {
-        width: 6rem;
-        height: 2.8rem;
-        font-size: 0.7rem;
-    }
-
-    section div h1 {
-        font-size: 3.2rem;
-    }
-    
-    section .div_h3 h3{
-        font-size: 1.5rem;
-    }
-    
-    section form div #floatingInputValue {
-        height: 2.5rem;
-        width: 8rem;
-        font-size: 2vw;
-        margin-top: 1vw
-    }
-    
-    section form div label {
-        font-size: 2vw;
-    }
-
-    section #form_2 #div_cep span{
-        font-size: 2vw;
-    }
-
-    section #form_2 #div_select select{
-        font-size: 1.5vw;
-    }
-
-    section div #botao {
-        height: 3rem;
-        width: 8rem;
-        font-size: 3vw;
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
     }
 }
 
